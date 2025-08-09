@@ -3,20 +3,3 @@
 Welcome to my personal portfolio website!  
 This project showcases my work, skills, and projects in a clean, responsive, and user-friendly format.
 
-## 🚀 Features
-- **About Me** – A brief introduction to who I am and what I do.
-- **Projects** – Highlighted work with descriptions, images, and links.
-- **Skills** – My technical expertise and tools I use.
-- **Contact** – Easy ways to get in touch with me.
-- **Responsive Design** – Works perfectly on desktop, tablet, and mobile devices.
-
-## 🛠️ Tech Stack
-- **Frontend:** Next.js / React.js, Tailwind CSS (or Bootstrap)
-- **Backend:** Node.js, Express.js (optional if using backend APIs)
-- **Database:** MongoDB (optional)
-- **Deployment:** Vercel / Netlify / GitHub Pages
-
-## 📸 Screenshots
-*(Add screenshots here once your portfolio is ready)*
-
-## 📂 Folder Structure
