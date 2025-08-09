@@ -64,9 +64,9 @@ export default function EnhancedPortfolio() {
       subtitle: "Algorithmic Precision in C",
       desc: "A robust C implementation featuring decimal, binary, octal & hexadecimal conversion with comprehensive fractional number support and optimized algorithms.",
       tech: ["C", "Algorithms", "Mathematics", "CLI"],
-      link: "https://github.com/yourusername/number-system-converter",
+      link: "https://github.com/ijahangirabbas/Number-System-Converter",
       gradient: "from-blue-500 to-cyan-400",
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className="w-6 h-6" />,
     },
     {
       id: 2,
@@ -76,7 +76,7 @@ export default function EnhancedPortfolio() {
       tech: ["JavaScript", "Chrome API", "React", "CSS3"],
       link: "https://github.com/yourusername/link-controller",
       gradient: "from-purple-500 to-pink-400",
-      icon: <Palette className="w-6 h-6" />
+      icon: <Palette className="w-6 h-6" />,
     },
     {
       id: 3,
@@ -86,7 +86,7 @@ export default function EnhancedPortfolio() {
       tech: ["React", "Node.js", "MongoDB", "Express"],
       link: "#",
       gradient: "from-green-500 to-emerald-400",
-      icon: <Zap className="w-6 h-6" />
+      icon: <Zap className="w-6 h-6" />,
     },
     {
       id: 4,
@@ -94,10 +94,10 @@ export default function EnhancedPortfolio() {
       subtitle: "JavaScript Adventure Game",
       desc: "An immersive text-based terminal adventure featuring dynamic combat systems, comprehensive inventory management, interactive NPCs, and economic gameplay mechanics.",
       tech: ["JavaScript", "Game Development", "Node.js", "CLI"],
-      link: "#",
+      link: "https://github.com/ijahangirabbas/Text-Adventure-Game",
       gradient: "from-orange-500 to-red-400",
-      icon: <Code className="w-6 h-6" />
-    }
+      icon: <Code className="w-6 h-6" />,
+    },
   ];
 
   const skills = [
@@ -117,22 +117,36 @@ export default function EnhancedPortfolio() {
   return (
     <div className={`${dark ? "dark" : ""} transition-all duration-300`}>
       {/* Floating Navigation Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? "mt-4 mx-4" 
-          : "mt-6 mx-6"
-      }`}>
-        <div className={`backdrop-blur-xl rounded-2xl border shadow-2xl transition-all duration-500 ${
-          scrolled 
-            ? "bg-slate-900/95 dark:bg-slate-800/95 border-slate-700/50 shadow-slate-900/20" 
-            : "bg-slate-800/90 dark:bg-slate-900/90 border-slate-600/30 shadow-slate-900/30"
-        }`}>
-          <div className={`max-w-7xl mx-auto px-6 transition-all duration-500 ${scrolled ? "py-3" : "py-4"}`}>
-            <div className={`flex items-center ${scrolled ? "justify-center" : "justify-between"}`}>
-              <div className={`font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent transition-all duration-500 ${scrolled ? "text-xl" : "text-2xl"}`}>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled ? "mt-4 mx-4" : "mt-6 mx-6"
+        }`}
+      >
+        <div
+          className={`backdrop-blur-xl rounded-2xl border shadow-2xl transition-all duration-500 ${
+            scrolled
+              ? "bg-slate-900/95 dark:bg-slate-800/95 border-slate-700/50 shadow-slate-900/20"
+              : "bg-slate-800/90 dark:bg-slate-900/90 border-slate-600/30 shadow-slate-900/30"
+          }`}
+        >
+          <div
+            className={`max-w-7xl mx-auto px-6 transition-all duration-500 ${
+              scrolled ? "py-3" : "py-4"
+            }`}
+          >
+            <div
+              className={`flex items-center ${
+                scrolled ? "justify-center" : "justify-between"
+              }`}
+            >
+              <div
+                className={`font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent transition-all duration-500 ${
+                  scrolled ? "text-xl" : "text-2xl"
+                }`}
+              >
                 Jahangir Abbas
               </div>
-              
+
               {/* Desktop Navigation - Hidden when scrolled */}
               {!scrolled && (
                 <nav className="hidden md:flex items-center gap-6">
@@ -141,8 +155,8 @@ export default function EnhancedPortfolio() {
                       key={item.href}
                       href={item.href}
                       className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-white/10 ${
-                        currentSection === item.href.slice(1) 
-                          ? "text-cyan-400 bg-cyan-400/10" 
+                        currentSection === item.href.slice(1)
+                          ? "text-cyan-400 bg-cyan-400/10"
                           : "text-gray-300 hover:text-white"
                       }`}
                     >
@@ -153,7 +167,11 @@ export default function EnhancedPortfolio() {
                     onClick={() => setDark(!dark)}
                     className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 hover:scale-110 text-gray-300 hover:text-white"
                   >
-                    {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                    {dark ? (
+                      <Sun className="w-4 h-4" />
+                    ) : (
+                      <Moon className="w-4 h-4" />
+                    )}
                   </button>
                 </nav>
               )}
@@ -164,7 +182,11 @@ export default function EnhancedPortfolio() {
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   className="md:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all duration-300 text-gray-300 hover:text-white"
                 >
-                  {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                  {mobileMenuOpen ? (
+                    <X className="w-5 h-5" />
+                  ) : (
+                    <Menu className="w-5 h-5" />
+                  )}
                 </button>
               )}
             </div>
@@ -184,10 +206,17 @@ export default function EnhancedPortfolio() {
                     </a>
                   ))}
                   <button
-                    onClick={() => {setDark(!dark); setMobileMenuOpen(false);}}
+                    onClick={() => {
+                      setDark(!dark);
+                      setMobileMenuOpen(false);
+                    }}
                     className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
                   >
-                    {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                    {dark ? (
+                      <Sun className="w-4 h-4" />
+                    ) : (
+                      <Moon className="w-4 h-4" />
+                    )}
                     {dark ? "Light Mode" : "Dark Mode"}
                   </button>
                 </div>
@@ -199,34 +228,66 @@ export default function EnhancedPortfolio() {
 
       {/* Main Content */}
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-        
         {/* Hero Section with Galaxy Background */}
-        <section id="hero" className="relative pt-24 pb-20 px-6 overflow-hidden min-h-screen flex items-center">
+        <section
+          id="hero"
+          className="relative pt-24 pb-20 px-6 overflow-hidden min-h-screen flex items-center"
+        >
           {/* Galaxy Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-indigo-950" />
-          
+
           {/* Random Tech Stack Names */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-[10%] left-[15%] text-3xl font-bold text-white transform -rotate-12">JavaScript</div>
-            <div className="absolute top-[25%] right-[20%] text-2xl font-bold text-white transform rotate-6">React</div>
-            <div className="absolute top-[40%] left-[8%] text-4xl font-bold text-white transform rotate-12">Node.js</div>
-            <div className="absolute top-[15%] right-[40%] text-2xl font-bold text-white transform -rotate-6">Next.js</div>
-            <div className="absolute top-[60%] right-[15%] text-3xl font-bold text-white transform rotate-8">MongoDB</div>
-            <div className="absolute bottom-[30%] left-[25%] text-2xl font-bold text-white transform -rotate-15">Express</div>
-            <div className="absolute top-[70%] left-[40%] text-2xl font-bold text-white transform rotate-3">Bootstrap</div>
-            <div className="absolute top-[35%] right-[45%] text-4xl font-bold text-white transform -rotate-8">Tailwind</div>
-            <div className="absolute bottom-[40%] right-[30%] text-2xl font-bold text-white transform rotate-15">TypeScript</div>
-            <div className="absolute top-[80%] right-[50%] text-3xl font-bold text-white transform -rotate-3">API</div>
-            <div className="absolute bottom-[20%] left-[60%] text-2xl font-bold text-white transform rotate-9">GitHub</div>
-            <div className="absolute top-[55%] left-[70%] text-4xl font-bold text-white transform -rotate-12">C++</div>
-            <div className="absolute bottom-[50%] left-[10%] text-2xl font-bold text-white transform rotate-12">Docker</div>
-            <div className="absolute top-[20%] left-[50%] text-3xl font-bold text-white transform -rotate-6">AWS</div>
-            <div className="absolute bottom-[60%] right-[60%] text-2xl font-bold text-white transform rotate-18">Git</div>
+            <div className="absolute top-[10%] left-[15%] text-3xl font-bold text-white transform -rotate-12">
+              JavaScript
+            </div>
+            <div className="absolute top-[25%] right-[20%] text-2xl font-bold text-white transform rotate-6">
+              React
+            </div>
+            <div className="absolute top-[40%] left-[8%] text-4xl font-bold text-white transform rotate-12">
+              Node.js
+            </div>
+            <div className="absolute top-[15%] right-[40%] text-2xl font-bold text-white transform -rotate-6">
+              Next.js
+            </div>
+            <div className="absolute top-[60%] right-[15%] text-3xl font-bold text-white transform rotate-8">
+              MongoDB
+            </div>
+            <div className="absolute bottom-[30%] left-[25%] text-2xl font-bold text-white transform -rotate-15">
+              Express
+            </div>
+            <div className="absolute top-[70%] left-[40%] text-2xl font-bold text-white transform rotate-3">
+              Bootstrap
+            </div>
+            <div className="absolute top-[35%] right-[45%] text-4xl font-bold text-white transform -rotate-8">
+              Tailwind
+            </div>
+            <div className="absolute bottom-[40%] right-[30%] text-2xl font-bold text-white transform rotate-15">
+              TypeScript
+            </div>
+            <div className="absolute top-[80%] right-[50%] text-3xl font-bold text-white transform -rotate-3">
+              API
+            </div>
+            <div className="absolute bottom-[20%] left-[60%] text-2xl font-bold text-white transform rotate-9">
+              GitHub
+            </div>
+            <div className="absolute top-[55%] left-[70%] text-4xl font-bold text-white transform -rotate-12">
+              C++
+            </div>
+            <div className="absolute bottom-[50%] left-[10%] text-2xl font-bold text-white transform rotate-12">
+              Docker
+            </div>
+            <div className="absolute top-[20%] left-[50%] text-3xl font-bold text-white transform -rotate-6">
+              AWS
+            </div>
+            <div className="absolute bottom-[60%] right-[60%] text-2xl font-bold text-white transform rotate-18">
+              Git
+            </div>
           </div>
-          
+
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
-          
+
           <div className="relative max-w-7xl mx-auto z-10">
             <div className="text-center space-y-10">
               <div className="space-y-8">
@@ -234,24 +295,37 @@ export default function EnhancedPortfolio() {
                   <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
                   Available for opportunities
                 </div>
-                
+
                 <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold leading-tight text-white">
                   Full-Stack{" "}
                   <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-2xl">
                     Developer
                   </span>
                 </h1>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-4xl mx-auto">
-                  Crafting innovative web solutions with modern technologies. 
-                  From concept to deployment, I build scalable applications that make a difference.
+                  Crafting innovative web solutions with modern technologies.
+                  From concept to deployment, I build scalable applications that
+                  make a difference.
                 </p>
               </div>
 
               {/* Enhanced Tech Stack Pills */}
               <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
-                {["JavaScript", "React", "Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Bootstrap"].map((tech) => (
-                  <span key={tech} className="px-5 py-3 bg-white/10 backdrop-blur-md rounded-full text-white border border-white/20 text-sm font-medium hover:bg-white/20 hover:scale-105 transition-all duration-300 shadow-lg">
+                {[
+                  "JavaScript",
+                  "React",
+                  "Next.js",
+                  "Node.js",
+                  "Express",
+                  "MongoDB",
+                  "Tailwind CSS",
+                  "Bootstrap",
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-5 py-3 bg-white/10 backdrop-blur-md rounded-full text-white border border-white/20 text-sm font-medium hover:bg-white/20 hover:scale-105 transition-all duration-300 shadow-lg"
+                  >
                     {tech}
                   </span>
                 ))}
@@ -276,7 +350,7 @@ export default function EnhancedPortfolio() {
 
               <div className="flex items-center justify-center gap-8 pt-8">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/ijahangirabbas"
                   className="p-4 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 text-white hover:scale-125 shadow-lg hover:shadow-xl"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -284,7 +358,7 @@ export default function EnhancedPortfolio() {
                   <Github className="w-7 h-7" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/ijahangirabbas"
                   className="p-4 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 text-white hover:scale-125 shadow-lg hover:shadow-xl"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -292,7 +366,7 @@ export default function EnhancedPortfolio() {
                   <Linkedin className="w-7 h-7" />
                 </a>
                 <a
-                  href="mailto:jahangir@example.com"
+                  href="mailto:jahangirabbas658@gmail.com"
                   className="p-4 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 text-white hover:scale-125 shadow-lg hover:shadow-xl"
                 >
                   <Mail className="w-7 h-7" />
@@ -300,7 +374,7 @@ export default function EnhancedPortfolio() {
               </div>
             </div>
           </div>
-          
+
           {/* Enhanced Scroll indicator */}
           <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white/70">
             <div className="flex flex-col items-center gap-3">
@@ -318,8 +392,9 @@ export default function EnhancedPortfolio() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6">About Me</h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                I'm a student & self-taught developer who focuses on building useful tools and learning by shipping. 
-                Passionate about clean code, user experience, and continuous growth.
+                I'm a student & self-taught developer who focuses on building
+                useful tools and learning by shipping. Passionate about clean
+                code, user experience, and continuous growth.
               </p>
             </div>
 
@@ -327,14 +402,18 @@ export default function EnhancedPortfolio() {
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold">My Journey</h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  My development journey spans multiple domains - from low-level system programming in C and C++ 
-                  to modern web development, DevOps practices, and cybersecurity fundamentals. I believe in 
-                  learning by doing and shipping projects that solve real problems.
+                  My development journey spans multiple domains - from low-level
+                  system programming in C and C++ to modern web development,
+                  DevOps practices, and cybersecurity fundamentals. I believe in
+                  learning by doing and shipping projects that solve real
+                  problems.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Each project I work on teaches me something new, whether it's optimizing algorithms, 
-                  creating intuitive user interfaces, or architecting scalable systems. I'm always excited 
-                  to take on new challenges and collaborate with other passionate developers.
+                  Each project I work on teaches me something new, whether it's
+                  optimizing algorithms, creating intuitive user interfaces, or
+                  architecting scalable systems. I'm always excited to take on
+                  new challenges and collaborate with other passionate
+                  developers.
                 </p>
               </div>
 
@@ -362,12 +441,16 @@ export default function EnhancedPortfolio() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-20 px-6 bg-gray-100 dark:bg-gray-800/50">
+        <section
+          id="projects"
+          className="py-20 px-6 bg-gray-100 dark:bg-gray-800/50"
+        >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6">Projects</h2>
               <p className="text-xl text-gray-600 dark:text-gray-400">
-                A showcase of projects that demonstrate the breadth and depth of my development skills
+                A showcase of projects that demonstrate the breadth and depth of
+                my development skills
               </p>
             </div>
 
@@ -377,16 +460,22 @@ export default function EnhancedPortfolio() {
                   key={project.id}
                   className="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] overflow-hidden"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                  
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                  />
+
                   <div className="relative">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${project.gradient} text-white shadow-lg`}>
+                      <div
+                        className={`p-3 rounded-xl bg-gradient-to-br ${project.gradient} text-white shadow-lg`}
+                      >
                         {project.icon}
                       </div>
                       <div>
                         <h3 className="text-xl font-bold">{project.title}</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">{project.subtitle}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                          {project.subtitle}
+                        </p>
                       </div>
                     </div>
 
@@ -416,7 +505,7 @@ export default function EnhancedPortfolio() {
                         View Source
                         <ExternalLink className="w-3 h-3 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                       </a>
-                      
+
                       <button className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-all duration-300 text-sm font-medium hover:scale-105 hover:shadow-md">
                         Live Demo
                         <ArrowRight className="w-3 h-3" />
@@ -430,15 +519,19 @@ export default function EnhancedPortfolio() {
         </section>
 
         {/* Professional Contact Section */}
-        <section id="contact" className="py-24 px-6 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900/20">
+        <section
+          id="contact"
+          className="py-24 px-6 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900/20"
+        >
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-indigo-700 dark:from-white dark:to-indigo-300 bg-clip-text text-transparent">
                 Let's Create Something Extraordinary
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                Ready to bring your vision to life? Whether you need a full-stack application, 
-                Chrome extension, or system-level solution, I'm here to help you succeed.
+                Ready to bring your vision to life? Whether you need a
+                full-stack application, Chrome extension, or system-level
+                solution, I'm here to help you succeed.
               </p>
             </div>
 
@@ -446,15 +539,22 @@ export default function EnhancedPortfolio() {
               {/* Contact Methods */}
               <div className="lg:col-span-2 space-y-8">
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Get In Touch</h3>
+                  <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
+                    Get In Touch
+                  </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="flex flex-col items-center gap-4 group cursor-pointer text-center">
                       <div className="p-4 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl text-white group-hover:scale-110 transition-transform">
                         <Mail className="w-8 h-8" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Email</h4>
-                        <a href="mailto:jahangir@example.com" className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 font-medium block mb-1">
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                          Email
+                        </h4>
+                        <a
+                          href="mailto:jahangir@example.com"
+                          className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 font-medium block mb-1"
+                        >
                           jahangir@example.com
                         </a>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -468,8 +568,13 @@ export default function EnhancedPortfolio() {
                         <Github className="w-8 h-8" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">GitHub</h4>
-                        <a href="https://github.com/yourusername" className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 font-medium block mb-1">
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                          GitHub
+                        </h4>
+                        <a
+                          href="https://github.com/yourusername"
+                          className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 font-medium block mb-1"
+                        >
                           @yourusername
                         </a>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -483,8 +588,13 @@ export default function EnhancedPortfolio() {
                         <Linkedin className="w-8 h-8" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">LinkedIn</h4>
-                        <a href="https://linkedin.com/in/yourusername" className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 font-medium block mb-1">
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                          LinkedIn
+                        </h4>
+                        <a
+                          href="https://linkedin.com/in/yourusername"
+                          className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 font-medium block mb-1"
+                        >
                           Connect professionally
                         </a>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -498,8 +608,12 @@ export default function EnhancedPortfolio() {
                         <Zap className="w-8 h-8" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Response Time</h4>
-                        <p className="text-gray-600 dark:text-gray-400 font-medium mb-1">Within 24-48 hours</p>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                          Response Time
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-400 font-medium mb-1">
+                          Within 24-48 hours
+                        </p>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
                           Usually much faster!
                         </p>
@@ -511,8 +625,12 @@ export default function EnhancedPortfolio() {
                         <Code className="w-8 h-8" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Development Approach</h4>
-                        <p className="text-gray-600 dark:text-gray-400 font-medium mb-1">Agile & iterative</p>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                          Development Approach
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-400 font-medium mb-1">
+                          Agile & iterative
+                        </p>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
                           Regular updates & feedback
                         </p>
@@ -524,8 +642,12 @@ export default function EnhancedPortfolio() {
                         <Send className="w-8 h-8" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Available for work</h4>
-                        <p className="text-gray-600 dark:text-gray-400 font-medium mb-1">Currently accepting</p>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                          Available for work
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-400 font-medium mb-1">
+                          Currently accepting
+                        </p>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
                           New projects & collaborations
                         </p>
@@ -536,10 +658,13 @@ export default function EnhancedPortfolio() {
                   <div className="mt-8 p-4 bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20 rounded-xl border border-indigo-200 dark:border-indigo-800">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="font-medium text-gray-900 dark:text-white">Ready to start your project?</span>
+                      <span className="font-medium text-gray-900 dark:text-white">
+                        Ready to start your project?
+                      </span>
                     </div>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Fill out the form below and I'll get back to you within 24-48 hours with a detailed proposal.
+                      Fill out the form below and I'll get back to you within
+                      24-48 hours with a detailed proposal.
                     </p>
                   </div>
                 </div>
@@ -549,9 +674,12 @@ export default function EnhancedPortfolio() {
               <div className="lg:col-span-2">
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
                   <div className="mb-8">
-                    <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Start Your Project</h3>
+                    <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+                      Start Your Project
+                    </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Tell me about your project requirements and let's discuss how we can work together.
+                      Tell me about your project requirements and let's discuss
+                      how we can work together.
                     </p>
                   </div>
 
@@ -614,7 +742,9 @@ export default function EnhancedPortfolio() {
                           <option value="">Select project type</option>
                           <option value="web-app">Web Application</option>
                           <option value="mobile-app">Mobile App</option>
-                          <option value="chrome-extension">Chrome Extension</option>
+                          <option value="chrome-extension">
+                            Chrome Extension
+                          </option>
                           <option value="api">API Development</option>
                           <option value="system">System Programming</option>
                           <option value="other">Other</option>
@@ -687,10 +817,10 @@ export default function EnhancedPortfolio() {
                   Full-Stack Developer • Building the future, one line at a time
                 </p>
               </div>
-              
+
               <div className="flex items-center gap-6">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/ijahangirabbas"
                   className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -698,7 +828,7 @@ export default function EnhancedPortfolio() {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/ijahangirabbas"
                   className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -706,17 +836,18 @@ export default function EnhancedPortfolio() {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:jahangir@example.com"
+                  href="mailto:jahangirabbas658@gmail.com"
                   className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110"
                 >
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
             </div>
-            
+
             <div className="border-t border-gray-800 mt-8 pt-8 text-center">
               <p className="text-gray-400 text-sm">
-                © 2025 Jahangir Abbas. Crafted with passion and modern technologies.
+                © 2025 Jahangir Abbas. Crafted with passion and modern
+                technologies.
               </p>
             </div>
           </div>
