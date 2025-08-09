@@ -539,7 +539,7 @@ export default function EnhancedPortfolio() {
               {/* Contact Methods */}
               <div className="lg:col-span-2 space-y-8">
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
+                  <h3 className="text-2xl text-center underline font-bold mb-8 text-gray-900 dark:text-white">
                     Get In Touch
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -552,10 +552,10 @@ export default function EnhancedPortfolio() {
                           Email
                         </h4>
                         <a
-                          href="mailto:jahangir@example.com"
+                          href="mailto:jahangirabbas658@gmail.com"
                           className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 font-medium block mb-1"
                         >
-                          jahangir@example.com
+                          jahangirabbas658@gmail.com
                         </a>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
                           Preferred for project inquiries
@@ -572,10 +572,10 @@ export default function EnhancedPortfolio() {
                           GitHub
                         </h4>
                         <a
-                          href="https://github.com/yourusername"
+                          href="https://github.com/ijahangirabbas"
                           className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 font-medium block mb-1"
                         >
-                          @yourusername
+                          @ijahangirabbas
                         </a>
                         <p className="text-sm text-gray-500 dark:text-gray-400">
                           Explore my code & contributions
@@ -592,7 +592,7 @@ export default function EnhancedPortfolio() {
                           LinkedIn
                         </h4>
                         <a
-                          href="https://linkedin.com/in/yourusername"
+                          href="https://linkedin.com/in/ijahangirabbas"
                           className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 font-medium block mb-1"
                         >
                           Connect professionally
@@ -763,10 +763,10 @@ export default function EnhancedPortfolio() {
                         className="w-full px-4 py-4 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 transition-all duration-300 text-gray-900 dark:text-white appearance-none"
                       >
                         <option value="">Select budget range</option>
-                        <option value="under-5k">Under $5,000</option>
-                        <option value="5k-15k">$5,000 - $15,000</option>
-                        <option value="15k-50k">$15,000 - $50,000</option>
-                        <option value="50k-plus">$50,000+</option>
+                        <option value="under-5k">$100 - $500</option>
+                        <option value="5k-15k">$500 - $1,000</option>
+                        <option value="15k-50k">$1,000 - $2,000</option>
+                        <option value="50k-plus">$2,000+</option>
                         <option value="discuss">Let's discuss</option>
                       </select>
                     </div>
@@ -813,7 +813,7 @@ export default function EnhancedPortfolio() {
                 <div className="font-bold text-xl bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
                   Jahangir Abbas
                 </div>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-300 text-sm">
                   Full-Stack Developer • Building the future, one line at a time
                 </p>
               </div>
